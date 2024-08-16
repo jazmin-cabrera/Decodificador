@@ -1,0 +1,175 @@
+:root {
+    --color-primario: #e5e5e5;
+    --color-secundario: #0A3871;
+    --color-terciario: #495057;
+    --color-cuatro: #f5f0f0;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    padding: 2% 0% 0% 10% ;
+}
+body {
+    background-color: var(--color-primario);
+    height: 100vh;
+    box-sizing:border-box ; 
+}
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding:0% 8%;
+    
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    Flex-direction: column;
+    gap: 40px;
+    background-image: url('/Frame\ 1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container1 {
+    width:60vw;
+    height:86vh;
+    max-width: 600px;
+    background-size:300px 200px;
+    background-position:center;
+    background-color:var(--color-primario);
+    color: var(--color-secundario);
+    border-radius: 32px;
+
+}
+.container2{
+    background-color:var(--color-cuatro);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px; /* Ancho máximo de la caja */
+    width:20vw;
+    height:86vh;
+    background-image:url('/Muñeco.png');
+    background-size:330px 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    border-radius: 32px;
+    position: absolute;
+    right:25px;
+    /*transition: backgroud-image 0.2s ease;*/
+}
+
+.editable{
+    width:18vw;
+    height:16vh;
+    max-width: 200px;
+    background-color:white;
+    margin-top: 20px;
+    overflow: auto;
+}
+.sinfodo{
+    background-image: none;
+
+}
+.entrada {
+    border: 1px solid #ddd;
+    min-height: 100px;
+    border-radius: 4px;
+    position: relative;
+    background-color:var(--color-primario);
+    color: var(--color-secundario);
+    overflow: auto; /* Permite el desplazamiento si el contenido es más grande */
+    margin-bottom: 400px; /* Espacio entre los div editables */
+
+}
+.salida{
+    border: 1px solid white;
+    min-height: 100px;
+    border-radius: 4px;
+    position: relative;
+    background-color:white;
+    overflow: auto; /* Permite el desplazamiento si el contenido es más grande */
+    margin-bottom:10px; /* Espacio entre los div editables */
+    
+
+}
+input::placeholder{
+color: var(--color-secundario);
+}
+
+/* Placeholder */
+.editable:empty:before {
+    content: attr(placeholder);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    pointer-events: none; /* Permite hacer clic a través del placeholder */
+}
+
+/* Sin borde cuando está vacío y enfocado */
+.editable:empty:focus {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.editable:focus {
+    border: 1px solid transparent;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en filas en pantallas pequeñas */
+    gap: 10px; /* Espacio entre botones */
+}
+.buttoncopiar{
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en filas en pantallas pequeñas */
+    }
+
+    button{ 
+    flex: 1;
+    min-width: 120px; /* Ancho mínimo para los botones */
+    padding: 12px;
+    border: none;
+    border-radius: 24px;
+    background-color: var(--color-secundario);
+    color: white;
+    cursor: pointer;
+    text-align: center; /* Alinea el texto dentro del botón */
+}
+
+button:hover {
+    background-color: #919090;
+}
+.footer{
+    padding:10px;
+    text-align: center;
+    font-size: 1 rem;
+
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .editable {
+        min-height: 80px; /* Ajusta la altura mínima del div editable */
+    }
+
+    button {
+        min-width: 100px; /* Ajusta el ancho mínimo de los botones */
+        font-size: 14px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+}
+
+

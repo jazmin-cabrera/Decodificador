@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="Logo.png"/>
+    </header>
+    <main class="presentacion">
+        <section class="presentacion_contenido">
+       <div class="container1">
+        <div id="inputText" class="entrada" contenteditable="true" placeholder= "Ingrese el texto aquí"></div>
+        <div class="buttons">
+            <button onclick="encryptText()">Encriptar</button>
+            <button onclick="decryptText()">Desencriptar</button>
+            <div class="buttoncopiar">
+                <button onclick="copyText()">Copiar</button>
+        </div>
+    </section>
+        <div class="container2">
+        <div id="outputText" class="editable" contenteditable="false" placeholder="Resultado">
+            
+    </div>
+    <script src="script.js"></script>
+ </section>
+ </main>
+ <footer class="footer">
+    <p>Desarrollado por: Jazmin cabrera 2024 </p>
+ </footer>
+</body>
+</html>
